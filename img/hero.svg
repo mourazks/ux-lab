@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" role="img" aria-label="Tela com layout, botão e lupa">
+  <rect width="600" height="450" fill="#E8EEFB"/>
+  <rect x="70" y="60" width="460" height="290" rx="18" fill="#FFFFFF" stroke="#1D4ED8" stroke-width="6"/>
+  <rect x="70" y="60" width="460" height="46" rx="18" fill="#1D4ED8"/>
+  <circle cx="98" cy="83" r="7" fill="#FFFFFF"/><circle cx="122" cy="83" r="7" fill="#BFD0F7"/><circle cx="146" cy="83" r="7" fill="#BFD0F7"/>
+  <rect x="100" y="130" width="200" height="22" rx="6" fill="#1A2332"/>
+  <rect x="100" y="165" width="260" height="12" rx="6" fill="#94A3B8"/>
+  <rect x="100" y="187" width="230" height="12" rx="6" fill="#94A3B8"/>
+  <rect x="100" y="225" width="120" height="40" rx="10" fill="#B45309"/>
+  <rect x="236" y="225" width="100" height="40" rx="10" fill="none" stroke="#1D4ED8" stroke-width="4"/>
+  <rect x="380" y="130" width="120" height="100" rx="10" fill="#BFD0F7"/>
+  <rect x="100" y="285" width="95" height="45" rx="8" fill="#DCE6FB"/>
+  <rect x="207" y="285" width="95" height="45" rx="8" fill="#DCE6FB"/>
+  <rect x="314" y="285" width="95" height="45" rx="8" fill="#DCE6FB"/>
+  <rect x="421" y="285" width="79" height="45" rx="8" fill="#DCE6FB"/>
+  <circle cx="445" cy="345" r="42" fill="#FFFFFF" stroke="#B45309" stroke-width="10"/>
+  <line x1="476" y1="376" x2="520" y2="420" stroke="#B45309" stroke-width="14" stroke-linecap="round"/>
+</svg>
