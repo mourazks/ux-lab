@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Abas de pesquisa sobre UX, UI, WCAG, cores e glossário com busca.">
+  <title>Pesquisa | UX Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Aplica o tema salvo antes de desenhar a pagina (evita piscar) */
+    try {
+      var t = localStorage.getItem("tema");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+      if (localStorage.getItem("contraste") === "high") document.documentElement.setAttribute("data-contrast", "high");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="UX Lab, página inicial">UX<span>Lab</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="heuristicas.html">Heurísticas</a></li>
+          <li><a href="pesquisa.html" aria-current="page">Pesquisa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Pesquisa</h1>
+        <p class="section-sub">Escolha uma aba. Use as setas do teclado para trocar de aba.</p>
+
+        <div class="tabs">
+          <div class="tabs-list" role="tablist" aria-label="Tópicos de pesquisa">
+            <button class="tab-btn" role="tab" id="aba-ux" aria-controls="painel-ux" aria-selected="true">UX</button>
+            <button class="tab-btn" role="tab" id="aba-ui" aria-controls="painel-ui" aria-selected="false" tabindex="-1">UI</button>
+            <button class="tab-btn" role="tab" id="aba-wcag" aria-controls="painel-wcag" aria-selected="false" tabindex="-1">WCAG</button>
+            <button class="tab-btn" role="tab" id="aba-cores" aria-controls="painel-cores" aria-selected="false" tabindex="-1">Cores</button>
+            <button class="tab-btn" role="tab" id="aba-glossario" aria-controls="painel-glossario" aria-selected="false" tabindex="-1">Glossário</button>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="painel-ux" aria-labelledby="aba-ux">
+            <h2>UX: experiência do usuário</h2>
+            <p>UX engloba tudo o que a pessoa percebe e sente ao usar um produto: facilidade, rapidez, confiança e satisfação. O termo foi popularizado por Don Norman nos anos 1990.</p>
+            <ul>
+              <li><strong>Utilidade:</strong> o produto resolve um problema real?</li>
+              <li><strong>Usabilidade:</strong> é fácil de aprender e de usar?</li>
+              <li><strong>Desejabilidade:</strong> a experiência agrada e gera confiança?</li>
+            </ul>
+            <p>Ferramentas comuns: pesquisa com usuários, personas, jornadas, wireframes e testes de usabilidade.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="painel-ui" aria-labelledby="aba-ui" hidden>
+            <h2>UI: interface do usuário</h2>
+            <p>UI é a camada visual e interativa: layout, cores, tipografia, ícones, botões e estados (normal, foco, erro). Uma boa UI guia o olhar e deixa as ações óbvias.</p>
+            <ul>
+              <li><strong>Hierarquia visual:</strong> o mais importante aparece em destaque.</li>
+              <li><strong>Consistência:</strong> elementos iguais se comportam igual.</li>
+              <li><strong>Feedback:</strong> toda ação recebe uma resposta visível.</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="painel-wcag" aria-labelledby="aba-wcag" hidden>
+            <h2>WCAG: acessibilidade na web</h2>
+            <p>As Web Content Accessibility Guidelines, do W3C, organizam a acessibilidade em quatro princípios, conhecidos como POUR:</p>
+            <div class="cards">
+              <article class="card"><h3>Perceptível</h3><p>A informação pode ser percebida: texto alternativo em imagens, bom contraste.</p></article>
+              <article class="card"><h3>Operável</h3><p>Dá para usar só com teclado, com foco visível e sem pressa excessiva.</p></article>
+              <article class="card"><h3>Compreensível</h3><p>Textos claros, navegação previsível, erros explicados.</p></article>
+              <article class="card"><h3>Robusto</h3><p>Funciona com leitores de tela e tecnologias assistivas (HTML semântico, ARIA).</p></article>
+            </div>
+            <p>Os níveis de conformidade são A, AA e AAA. Este site busca o nível AA: contraste mínimo de 4,5:1 para texto normal e 3:1 para texto grande e componentes de interface.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="painel-cores" aria-labelledby="aba-cores" hidden>
+            <h2>Psicologia das cores</h2>
+            <div class="cards">
+              <article class="card"><h3>Azul</h3><p>Confiança, calma e segurança. É a cor principal do UX Lab, com ar profissional e de estudo.</p></article>
+              <article class="card"><h3>Âmbar</h3><p>Energia e atenção. Usado nos destaques sem agredir os olhos.</p></article>
+              <article class="card"><h3>Verde</h3><p>Sucesso e progresso. Aparece quando uma ação dá certo.</p></article>
+              <article class="card"><h3>Cinza e branco</h3><p>Neutralidade e respiro visual, para o conteúdo ser o foco.</p></article>
+            </div>
+            <p>Cor nunca deve ser o único meio de informar algo (WCAG 1.4.1): erros também têm texto, não só vermelho.</p>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="painel-glossario" aria-labelledby="aba-glossario" hidden>
+            <h2>Glossário com busca</h2>
+            <div class="search-box" role="search">
+              <label for="busca-glossario" class="sr-only">Buscar no glossário</label>
+              <input type="search" id="busca-glossario" placeholder="Ex.: contraste, persona, UX..." autocomplete="off">
+              <button class="btn btn-outline" type="button" id="limpar-glossario">Limpar busca</button>
+            </div>
+            <p class="result-count" id="contador-glossario" role="status" aria-live="polite"></p>
+            <div class="cards" id="lista-glossario"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>UX Lab</h2>
+          <p>Site educativo sobre UX/UI, heurísticas de Nielsen e acessibilidade (WCAG), criado para a disciplina de Desenvolvimento de Interfaces.</p>
+        </section>
+        <section>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="heuristicas.html">Heurísticas</a></li>
+            <li><a href="pesquisa.html">Pesquisa</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Links</h2>
+          <ul>
+            <li><a href="https://github.com/mourazks" target="_blank" rel="noopener">GitHub @mourazks</a></li>
+            <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/pt-br/" target="_blank" rel="noopener">WCAG (W3C)</a></li>
+            <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener">Heurísticas de Nielsen</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">© <span id="ano">2026</span> UX Lab · Arthur Moura Campos · RA 22602304 · UniCEUB</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

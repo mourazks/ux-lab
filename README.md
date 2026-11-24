@@ -8,11 +8,11 @@ Projeto Final de Desenvolvimento de Interfaces 2/2026 · UniCEUB.
 
 ## Status
 
-**Etapa 1 de 3: fundação.**
+**Etapa 2 de 3: conteúdo e interação.**
 
 - [x] Página inicial com hero, cartões explicativos e rodapé
 - [x] CSS com variáveis de cor, tema claro/escuro (segue o sistema) e layout responsivo
-- [ ] Páginas Heurísticas e Pesquisa, abas, busca e painel de acessibilidade (etapa 2)
+- [x] Páginas Heurísticas e Pesquisa, abas, busca, painel de acessibilidade e menu para celular
 - [ ] Carrossel, contato, login e validação de formulários (etapa 3)
 
 ## Como abrir

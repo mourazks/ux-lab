@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="As 10 heurísticas de usabilidade de Nielsen com busca.">
+  <title>Heurísticas de Nielsen | UX Lab</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    /* Aplica o tema salvo antes de desenhar a pagina (evita piscar) */
+    try {
+      var t = localStorage.getItem("tema");
+      if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+      if (localStorage.getItem("contraste") === "high") document.documentElement.setAttribute("data-contrast", "high");
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="UX Lab, página inicial">UX<span>Lab</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menu</button>
+      <nav class="nav" id="menu-principal" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="heuristicas.html" aria-current="page">Heurísticas</a></li>
+          <li><a href="pesquisa.html">Pesquisa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">As 10 heurísticas de Nielsen</h1>
+        <p class="section-sub">Jakob Nielsen propôs, em 1994, dez regras gerais para avaliar a usabilidade de uma interface. Pesquise por palavra ou número.</p>
+        <div class="search-box" role="search">
+          <label for="busca-heuristicas" class="sr-only">Buscar heurísticas</label>
+          <input type="search" id="busca-heuristicas" placeholder="Ex.: erro, feedback, 5..." autocomplete="off">
+          <button class="btn btn-outline" type="button" id="limpar-heuristicas">Limpar busca</button>
+        </div>
+        <p class="result-count" id="contador-heuristicas" role="status" aria-live="polite"></p>
+        <div class="cards" id="lista-heuristicas"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <section>
+          <h2>UX Lab</h2>
+          <p>Site educativo sobre UX/UI, heurísticas de Nielsen e acessibilidade (WCAG), criado para a disciplina de Desenvolvimento de Interfaces.</p>
+        </section>
+        <section>
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="heuristicas.html">Heurísticas</a></li>
+            <li><a href="pesquisa.html">Pesquisa</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Links</h2>
+          <ul>
+            <li><a href="https://github.com/mourazks" target="_blank" rel="noopener">GitHub @mourazks</a></li>
+            <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/pt-br/" target="_blank" rel="noopener">WCAG (W3C)</a></li>
+            <li><a href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank" rel="noopener">Heurísticas de Nielsen</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="footer-bottom">© <span id="ano">2026</span> UX Lab · Arthur Moura Campos · RA 22602304 · UniCEUB</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
