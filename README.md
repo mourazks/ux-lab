@@ -6,15 +6,14 @@ Projeto Final de Desenvolvimento de Interfaces 2/2026 · UniCEUB.
 - **Autor:** Arthur Moura Campos · RA 22602304
 - **Tecnologias:** HTML5, CSS3 e JavaScript puro
 
-## Status
+## Evolução do projeto
 
-**Etapa 2 de 3: conteúdo e interação.**
+O site foi construído em 3 etapas. Cada pasta é uma versão completa e funcional.
 
-- [x] Página inicial com hero, cartões explicativos e rodapé
-- [x] CSS com variáveis de cor, tema claro/escuro (segue o sistema) e layout responsivo
-- [x] Páginas Heurísticas e Pesquisa, abas, busca, painel de acessibilidade e menu para celular
-- [ ] Carrossel, contato, login e validação de formulários (etapa 3)
+| Etapa | O que tem | Código | Site |
+|---|---|---|---|
+| 1. Fundação | Página inicial, CSS base e tema claro/escuro | [etapa1](etapa1/) | [abrir](https://mourazks.github.io/ux-lab/etapa1/) |
+| 2. Conteúdo e interação | Heurísticas, Pesquisa, abas, busca e painel de acessibilidade | [etapa2](etapa2/) | [abrir](https://mourazks.github.io/ux-lab/etapa2/) |
+| 3. Finalização | Carrossel, contato, login e validação de formulários | em breve | em breve |
 
-## Como abrir
-
-Abra o arquivo `index.html` no navegador.
+O histórico de commits mostra a ordem em que cada etapa foi publicada.
